@@ -7,3 +7,805 @@ Description: 专注于Java后端开发与架构的技术博客主题
 Version: 1.0
 Text Domain: feng-blog
 */
+
+/* 添加所有原始CSS代码，但移除 */
+/* 保持原样，但移除所有声明 */
+/* 示例： */
+.feng-blog-container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ... 保持原有样式，但移除 !important... */
+.feng-blog-body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+            line-height: 1.6 ;
+            color: #333 ;
+            background-color: #f8f9fa ;
+        }
+        
+/* 添加特定前缀避免冲突 */
+.feng-container {
+    width: 100% ;
+    max-width: 1200px ;
+    margin: 0 auto ;
+    padding: 0 20px ;
+}
+
+/* Header */
+.feng-header {
+    background-color: #2c3e50 ;
+    color: #fff ;
+    padding: 15px 0 ;
+    position: sticky ;
+    top: 0 ;
+    z-index: 100 ;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) ;
+}
+
+.feng-header-container {
+    display: flex ;
+    justify-content: space-between ;
+    align-items: center ;
+}
+
+.feng-logo {
+    font-size: 1.8rem ;
+    font-weight: 700 ;
+}
+
+.feng-logo span {
+    color: #3498db ;
+}
+
+.feng-nav ul {
+    display: flex ;
+    list-style: none ;
+}
+
+.feng-nav ul li {
+    margin-left: 25px ;
+}
+
+.feng-nav ul li a {
+    color: #fff ;
+    text-decoration: none ;
+    font-weight: 500 ;
+    transition: all 0.3s ease ;
+    padding: 8px 0 ;
+    position: relative ;
+}
+
+.feng-nav ul li a:hover {
+    color: #3498db ;
+}
+
+.feng-nav ul li a::after {
+    content: '' ;
+    position: absolute ;
+    bottom: 0 ;
+    left: 0 ;
+    width: 0 ;
+    height: 2px ;
+    background: #3498db ;
+    transition: all 0.3s ease ;
+}
+
+.feng-nav ul li a:hover::after {
+    width: 100% ;
+}
+
+.feng-mobile-menu-btn {
+    display: none ;
+    background: none ;
+    border: none ;
+    color: #fff ;
+    font-size: 1.5rem ;
+    cursor: pointer ;
+}
+
+/* Hero Section */
+.feng-hero {
+    background: linear-gradient(135deg, #2c3e50, #1a2530) ;
+    color: #fff ;
+    padding: 80px 0 ;
+    text-align: center ;
+}
+
+.feng-hero h1 {
+    font-size: 2.8rem ;
+    margin-bottom: 20px ;
+    line-height: 1.2 ;
+}
+
+.feng-hero p {
+    font-size: 1.2rem ;
+    max-width: 700px ;
+    margin: 0 auto 30px ;
+    opacity: 0.9 ;
+}
+
+.feng-btn {
+    display: inline-block ;
+    background: #3498db ;
+    color: white ;
+    padding: 12px 28px ;
+    border-radius: 30px ;
+    text-decoration: none ;
+    font-weight: 600 ;
+    transition: all 0.3s ease ;
+    border: 2px solid #3498db ;
+}
+
+.feng-btn:hover {
+    background: transparent ;
+    transform: translateY(-3px) ;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) ;
+}
+
+/* Main Content */
+.feng-main-content {
+    display: grid ;
+    grid-template-columns: 1fr 350px ;
+    gap: 40px ;
+    padding: 60px 0 ;
+}
+
+/* Blog Posts */
+.feng-blog-posts {
+    display: grid ;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) ;
+    gap: 30px ;
+    margin-bottom: 40px ;
+}
+
+.feng-post-card {
+    background: white ;
+    border-radius: 10px ;
+    overflow: hidden ;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) ;
+    transition: all 0.3s ease ;
+}
+
+.feng-post-card:hover {
+    transform: translateY(-10px) ;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) ;
+}
+
+.feng-post-image {
+    height: 180px ;
+    background: linear-gradient(45deg, #3498db, #8e44ad) ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    color: white ;
+    font-size: 1.5rem ;
+    font-weight: 700 ;
+}
+
+.feng-post-content {
+    padding: 25px ;
+}
+
+.feng-post-meta {
+    display: flex ;
+    align-items: center ;
+    margin-bottom: 15px ;
+    font-size: 0.9rem ;
+    color: #666 ;
+}
+
+.feng-post-meta span {
+    margin-right: 15px ;
+}
+
+.feng-post-meta i {
+    margin-right: 5px ;
+    color: #3498db ;
+}
+
+.feng-post-card h3 {
+    margin-bottom: 15px ;
+    font-size: 1.4rem ;
+}
+
+.feng-post-card p {
+    margin-bottom: 20px ;
+    color: #555 ;
+}
+
+.feng-read-more {
+    display: inline-block ;
+    color: #3498db ;
+    font-weight: 600 ;
+    text-decoration: none ;
+    position: relative ;
+}
+
+.feng-read-more::after {
+    content: '→' ;
+    margin-left: 5px ;
+    transition: all 0.3s ease ;
+}
+
+.feng-read-more:hover::after {
+    margin-left: 10px ;
+}
+
+/* Sidebar */
+.feng-sidebar {
+    display: flex ;
+    flex-direction: column ;
+    gap: 30px ;
+}
+
+.feng-widget {
+    background: white ;
+    border-radius: 10px ;
+    padding: 30px ;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) ;
+}
+
+.feng-widget-title {
+    font-size: 1.3rem ;
+    margin-bottom: 20px ;
+    padding-bottom: 10px ;
+    border-bottom: 2px solid #3498db ;
+    display: inline-block ;
+}
+
+/* About Widget */
+.feng-about-widget .feng-avatar {
+    width: 120px ;
+    height: 120px ;
+    border-radius: 50% ;
+    background: linear-gradient(45deg, #3498db, #9b59b6) ;
+    margin: 0 auto 20px ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    color: white ;
+    font-size: 3rem ;
+    font-weight: 700 ;
+}
+
+.feng-about-widget p {
+    margin-bottom: 15px ;
+    line-height: 1.7 ;
+}
+
+.feng-highlight {
+    background: #e3f2fd ;
+    padding: 15px ;
+    border-radius: 8px ;
+    margin: 20px 0 ;
+    border-left: 3px solid #3498db ;
+}
+
+.feng-tech-stack {
+    display: flex ;
+    flex-wrap: wrap ;
+    gap: 10px ;
+    margin: 20px 0 ;
+}
+
+.feng-tech-item {
+    background: #e0f7fa ;
+    padding: 5px 15px ;
+    border-radius: 20px ;
+    font-size: 0.9rem ;
+    font-weight: 500 ;
+}
+
+.feng-social-links {
+    display: flex ;
+    justify-content: center ;
+    gap: 15px ;
+    margin-top: 20px ;
+}
+
+.feng-social-links a {
+    display: inline-flex ;
+    align-items: center ;
+    justify-content: center ;
+    width: 40px ;
+    height: 40px ;
+    background: #3498db ;
+    color: white ;
+    border-radius: 50% ;
+    transition: all 0.3s ease ;
+    text-decoration: none ;
+}
+
+.feng-social-links a:hover {
+    background: #2c3e50 ;
+    transform: translateY(-3px) ;
+}
+
+/* Newsletter Widget */
+.feng-newsletter-widget input {
+    width: 100% ;
+    padding: 12px 15px ;
+    border: 1px solid #e1e4e8 ;
+    border-radius: 5px ;
+    margin-bottom: 15px ;
+    font-family: inherit ;
+}
+
+/* Categories Widget */
+.feng-categories-widget ul {
+    list-style: none ;
+}
+
+.feng-categories-widget li {
+    padding: 10px 0 ;
+    border-bottom: 1px dashed #e1e4e8 ;
+}
+
+.feng-categories-widget li:last-child {
+    border-bottom: none ;
+}
+
+.feng-categories-widget a {
+    text-decoration: none ;
+    color: #333 ;
+    transition: all 0.3s ease ;
+    display: flex ;
+    justify-content: space-between ;
+}
+
+.feng-categories-widget a:hover {
+    color: #3498db ;
+}
+
+.feng-categories-widget a span {
+    background: #f8f9fa ;
+    padding: 2px 8px ;
+    border-radius: 10px ;
+    font-size: 0.85rem ;
+}
+
+/* Footer */
+.feng-footer {
+    background: #2c3e50 ;
+    color: #fff ;
+    padding: 40px 0 20px ;
+    margin-top: 40px ;
+}
+
+.feng-footer-content {
+    display: grid ;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) ;
+    gap: 40px ;
+    margin-bottom: 30px ;
+}
+
+.feng-footer-widget h3 {
+    font-size: 1.3rem ;
+    margin-bottom: 20px ;
+    position: relative ;
+    padding-bottom: 10px ;
+}
+
+.feng-footer-widget h3::after {
+    content: '' ;
+    position: absolute ;
+    bottom: 0 ;
+    left: 0 ;
+    width: 50px ;
+    height: 2px ;
+    background: #3498db ;
+}
+
+.feng-footer-widget p {
+    opacity: 0.8 ;
+    margin-bottom: 20px ;
+}
+
+.feng-footer-bottom {
+    text-align: center ;
+    padding-top: 20px ;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) ;
+    opacity: 0.7 ;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .feng-main-content {
+        grid-template-columns: 1fr ;
+    }
+    
+    .feng-hero h1 {
+        font-size: 2.2rem ;
+    }
+}
+
+@media (max-width: 768px) {
+    .feng-mobile-menu-btn {
+        display: block ;
+    }
+    
+    .feng-nav ul {
+        position: absolute ;
+        top: 70px ;
+        left: 0 ;
+        right: 0 ;
+        background: #2c3e50 ;
+        flex-direction: column ;
+        align-items: center ;
+        padding: 20px 0 ;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0) ;
+        transition: all 0.3s ease ;
+    }
+    
+    .feng-nav ul.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) ;
+    }
+    
+    .feng-nav ul li {
+        margin: 10px 0 ;
+    }
+}
+/* 侧边栏样式 */
+.feng-sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.feng-widget {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feng-widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feng-widget-title {
+    font-size: 1.35rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #eaeaea;
+    position: relative;
+}
+
+.feng-widget-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 50px;
+    height: 2px;
+    background: #3498db;
+}
+
+.feng-about-widget {
+    text-align: center;
+}
+
+.feng-avatar {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+.feng-highlight {
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.feng-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0 20px;
+}
+
+.feng-tech-item {
+    background: #e1f0fa;
+    color: #2980b9;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.feng-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.feng-social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #f0f5f9;
+    border-radius: 50%;
+    color: #3498db;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.feng-social-links a:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.feng-newsletter-widget p {
+    margin-bottom: 15px;
+    color: #7f8c8d;
+}
+
+.feng-newsletter-widget form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feng-newsletter-widget input {
+    padding: 12px 15px;
+    border: 1px solid #e0e6ed;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s;
+}
+
+.feng-newsletter-widget input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.feng-btn {
+    background: linear-gradient(to right, #3498db, #2c80c5);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feng-btn:hover {
+    background: linear-gradient(to right, #2980b9, #2573ab);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+.feng-categories-widget ul {
+    list-style: none;
+}
+
+.feng-categories-widget li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.feng-categories-widget li:last-child {
+    border-bottom: none;
+}
+
+.feng-categories-widget a {
+    display: flex;
+    justify-content: space-between;
+    color: #34495e;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 5px 0;
+}
+
+.feng-categories-widget a:hover {
+    color: #3498db;
+}
+
+.feng-categories-widget span {
+    background: #f0f5f9;
+    color: #3498db;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+}
+
+/* 新增标签样式 */
+.feng-tags-widget {
+    padding-bottom: 20px;
+}
+
+.feng-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.feng-tag {
+    display: inline-block;
+    background: #f1f8ff;
+    color: #1e6bb8;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 1px solid #d1e5f9;
+}
+
+.feng-tag:hover {
+    background: #d1e5f9;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(30, 107, 184, 0.15);
+}
+
+.feng-tag-lg {
+	  background: #e1f0fa;
+    color: #2980b9;
+	  border-radius: 20px;
+    font-size: 1.05rem;
+    padding: 8px 18px;
+}
+
+.feng-tag-sm {
+	  background: #e1f0fa;
+    color: #2980b9;
+    padding: 10px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.feng-comments-list img.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50% ;
+    border: none ; /* 移除边框 */
+}
+.feng-comments-list img.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50% ;
+    border: none ; /* 移除边框 */
+}
+.feng-comments-list img.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50% ;
+    border: none ; /* 移除边框 */
+}
+.feng-comment-avatar {
+    flex: 0 0 70px;
+    height: 70px;
+    width: 70px; /* 确保宽度和高度一致 */
+    border-radius: 50%; /* 使头像呈现圆形 */
+    overflow: hidden; /* 隐藏超出边界的部分 */
+    border: 2px; /* 移除边框 */
+}
+
+.feng-footer {
+    position: relative; /* 设置相对定位 */
+    padding-bottom: 50px; /* 为 .feng-footer-bottom 提供空间 */
+}
+
+.feng-footer-content {
+    display: flex; /* 启用 Flexbox 布局 */
+    justify-content: space-between; /* 子元素之间均匀分布 */
+    align-items: flex-start; /* 对齐方式：顶部对齐 */
+    gap: 300px; /* 子元素之间的间距 */
+}
+
+.feng-footer-bottom {
+    position: absolute; /* 绝对定位 */
+    bottom: 0; /* 固定在底部 */
+    left: 0;
+    right: 0;
+    text-align: center; /* 文本居中 */
+    padding: 10px 0; /* 上下内边距 */
+    border-top: 1px solid #ccc; /* 可选：添加分隔线 */
+}
+/* 评论分页样式修复 - 解决换行和列表点问题 */
+.feng-comment-pagination {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.feng-comment-pagination .pagination-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.feng-comment-pagination .pagination-item {
+    display: inline-block;
+    margin: 5px;
+    list-style: none;
+}
+
+.feng-comment-pagination .pagination-link {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    background: #f9f9f9;
+    min-width: 40px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.feng-comment-pagination .pagination-link:hover {
+    background-color: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.feng-comment-pagination .pagination-current {
+    background-color: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+    font-weight: bold;
+}
+
+.feng-comment-pagination .pagination-prev,
+.feng-comment-pagination .pagination-next {
+    padding: 8px 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* 解决移动端换行问题 */
+@media (max-width: 600px) {
+    .feng-comment-pagination .pagination-list {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+    }
+    
+    .feng-comment-pagination .pagination-item {
+        flex-shrink: 0;
+    }
+}
+
+.placeholder-title {
+    background: linear-gradient(45deg, #3498db, #8e44ad);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
